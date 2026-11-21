@@ -1,0 +1,11 @@
+table gold_destination_rankings
+    column 'country_key'
+        dataType: text
+        isKey
+        sourceColumn: country_key
+    column 'country_name'
+        dataType: text
+        sourceColumn: country_name
+    column 'total_arrivals'
+        dataType: text
+        sourceColumn: total_arrivals

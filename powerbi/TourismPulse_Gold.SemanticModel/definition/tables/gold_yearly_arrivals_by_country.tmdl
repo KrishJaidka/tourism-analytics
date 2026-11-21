@@ -1,0 +1,33 @@
+table gold_yearly_arrivals_by_country
+    column 'country_key'
+        dataType: text
+        isKey
+        sourceColumn: country_key
+    column 'geo_code'
+        dataType: text
+        sourceColumn: geo_code
+    column 'country_name'
+        dataType: text
+        sourceColumn: country_name
+    column 'year'
+        dataType: text
+        sourceColumn: year
+    column 'source_system'
+        dataType: text
+        sourceColumn: source_system
+    column 'indicator_code'
+        dataType: text
+        sourceColumn: indicator_code
+    column 'visitor_category'
+        dataType: text
+        sourceColumn: visitor_category
+    column 'arrivals'
+        dataType: text
+        sourceColumn: arrivals
+    column 'unit'
+        dataType: text
+        sourceColumn: unit
+    column 'is_primary_period'
+        dataType: text
+        isHidden
+        sourceColumn: is_primary_period

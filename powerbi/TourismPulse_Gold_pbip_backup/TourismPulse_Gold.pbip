@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/pbip/pbipProperties/1.0.0/schema.json",
+  "version": "4.0",
+  "artifacts": [
+    {
+      "report": {
+        "path": "TourismPulse_Gold.Report"
+      }
+    }
+  ]
+}

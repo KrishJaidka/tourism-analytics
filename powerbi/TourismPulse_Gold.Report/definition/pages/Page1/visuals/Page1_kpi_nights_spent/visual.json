@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "Page1_kpi_nights_spent",
+  "id": "Page1_kpi_nights_spent",
+  "position": {
+    "x": 460,
+    "y": 0,
+    "width": 190,
+    "height": 100
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "projections": [
+          {
+            "field": {
+              "type": "Field",
+              "field": {
+                "table": "fact_nights_spent",
+                "column": "Total Nights Spent"
+              },
+              "queryRef": "fact_nights_spent.Total Nights Spent",
+              "nativeQueryRef": "fact_nights_spent.Total Nights Spent"
+            },
+            "queryRef": "fact_nights_spent.Total Nights Spent"
+          }
+        ]
+      }
+    }
+  }
+}

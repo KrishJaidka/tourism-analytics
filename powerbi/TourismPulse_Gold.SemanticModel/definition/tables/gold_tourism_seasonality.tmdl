@@ -1,0 +1,19 @@
+table gold_tourism_seasonality
+    column 'month'
+        dataType: text
+        sourceColumn: month
+    column 'avg_arrivals'
+        dataType: text
+        sourceColumn: avg_arrivals
+    column 'median_arrivals'
+        dataType: text
+        sourceColumn: median_arrivals
+    column 'peak_arrivals'
+        dataType: text
+        sourceColumn: peak_arrivals
+    column 'lowest_arrivals'
+        dataType: text
+        sourceColumn: lowest_arrivals
+    column 'stddev'
+        dataType: text
+        sourceColumn: stddev

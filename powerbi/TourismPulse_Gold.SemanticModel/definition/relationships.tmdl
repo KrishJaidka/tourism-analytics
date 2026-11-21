@@ -1,0 +1,76 @@
+relationship R01
+    fromColumn: dim_country.country_key
+    toColumn: fact_tourism_arrivals.country_key
+
+relationship R02
+    fromColumn: dim_country.country_key
+    toColumn: fact_nights_spent.country_key
+
+relationship R03
+    fromColumn: dim_country.country_key
+    toColumn: fact_hotel_performance.country_key
+
+relationship R04
+    fromColumn: dim_country.country_key
+    toColumn: fact_hotel_occupancy.country_key
+
+relationship R05
+    fromColumn: dim_date.date_key
+    toColumn: fact_tourism_arrivals.date_key
+
+relationship R06
+    fromColumn: dim_date.date_key
+    toColumn: fact_nights_spent.date_key
+
+relationship R07
+    fromColumn: dim_date.date_key
+    toColumn: fact_hotel_occupancy.date_key
+
+relationship R08
+    fromColumn: fact_tourism_arrivals.country_key
+    toColumn: gold_yearly_arrivals_by_country.country_key
+
+relationship R09
+    fromColumn: fact_tourism_arrivals.country_key
+    toColumn: gold_monthly_arrivals_by_country.country_key
+
+relationship R10
+    fromColumn: fact_tourism_arrivals.country_key
+    toColumn: gold_tourism_growth_yearly.country_key
+
+relationship R11
+    fromColumn: fact_tourism_arrivals.country_key
+    toColumn: gold_tourism_growth_monthly.country_key
+
+relationship R12
+    fromColumn: fact_tourism_arrivals.country_key
+    toColumn: gold_visitor_category_analysis.country_key
+
+relationship R13
+    fromColumn: fact_nights_spent.country_key
+    toColumn: gold_nights_spent_trends.country_key
+
+relationship R14
+    fromColumn: fact_hotel_performance.country_key
+    toColumn: gold_hotel_capacity_trends.country_key
+
+relationship R15
+    fromColumn: fact_hotel_occupancy.country_key
+    toColumn: gold_hotel_occupancy_trends.country_key
+
+relationship R16
+    fromColumn: gold_yearly_arrivals_by_country.country_key
+    toColumn: gold_destination_rankings.country_key
+
+relationship R17
+    fromColumn: gold_yearly_arrivals_by_country.country_key
+    toColumn: gold_country_comparison.country_key
+
+relationship R18
+    fromColumn: fact_tourism_arrivals.country_key
+    toColumn: pbi_total_arrivals.country_key
+
+relationship R19
+    fromColumn: fact_hotel_occupancy.country_key
+    toColumn: pbi_avg_occupancy.country_key
+

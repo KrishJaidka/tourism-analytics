@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "Page3_bar_seasonality",
+  "id": "Page3_bar_seasonality",
+  "position": {
+    "x": 920,
+    "y": 0,
+    "width": 270,
+    "height": 400
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "projections": [
+          {
+            "field": {
+              "type": "Field",
+              "field": {
+                "table": "gold_tourism_seasonality",
+                "column": "month"
+              },
+              "queryRef": "gold_tourism_seasonality.month",
+              "nativeQueryRef": "gold_tourism_seasonality.month"
+            },
+            "queryRef": "gold_tourism_seasonality.month"
+          },
+          {
+            "field": {
+              "type": "Field",
+              "field": {
+                "table": "gold_tourism_seasonality",
+                "column": "avg_arrivals"
+              },
+              "queryRef": "gold_tourism_seasonality.avg_arrivals",
+              "nativeQueryRef": "gold_tourism_seasonality.avg_arrivals"
+            },
+            "queryRef": "gold_tourism_seasonality.avg_arrivals"
+          }
+        ]
+      }
+    }
+  }
+}

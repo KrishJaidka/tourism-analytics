@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "Page1_slicer_visitor_category",
+  "id": "Page1_slicer_visitor_category",
+  "position": {
+    "x": 850,
+    "y": 520,
+    "width": 330,
+    "height": 120
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "projections": [
+          {
+            "field": {
+              "type": "Field",
+              "field": {
+                "table": "fact_tourism_arrivals",
+                "column": "visitor_category"
+              },
+              "queryRef": "fact_tourism_arrivals.visitor_category",
+              "nativeQueryRef": "fact_tourism_arrivals.visitor_category"
+            },
+            "queryRef": "fact_tourism_arrivals.visitor_category"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+table fact_nights_spent
+    column 'country_key'
+        dataType: text
+        isKey
+        sourceColumn: country_key
+    column 'geo_code'
+        dataType: text
+        sourceColumn: geo_code
+    column 'year'
+        dataType: text
+        sourceColumn: year
+    column 'month'
+        dataType: text
+        sourceColumn: month
+    column 'date_key'
+        dataType: text
+        sourceColumn: date_key
+    column 'residence_category'
+        dataType: text
+        sourceColumn: residence_category
+    column 'activity_category'
+        dataType: text
+        sourceColumn: activity_category
+    column 'source_system'
+        dataType: text
+        sourceColumn: source_system
+    column 'original_value'
+        dataType: text
+        isHidden
+        sourceColumn: original_value
+    column 'original_unit'
+        dataType: text
+        isHidden
+        sourceColumn: original_unit
+    column 'standardized_value'
+        dataType: text
+        sourceColumn: standardized_value
+    column 'standardized_unit'
+        dataType: text
+        isHidden
+        sourceColumn: standardized_unit
+    column 'observation_status'
+        dataType: text
+        isHidden
+        sourceColumn: observation_status
+    column 'is_primary_period'
+        dataType: text
+        isHidden
+        sourceColumn: is_primary_period
+    measure 'Total Nights Spent' = SUMX(fact_nights_spent, standardized_value)
+        formatString: $ #,##0.00

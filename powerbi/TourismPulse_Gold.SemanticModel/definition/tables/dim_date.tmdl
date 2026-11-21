@@ -1,0 +1,29 @@
+table dim_date
+    column 'date_key'
+        dataType: text
+        sourceColumn: date_key
+    column 'date'
+        dataType: text
+        sourceColumn: date
+    column 'year'
+        dataType: text
+        sourceColumn: year
+    column 'quarter'
+        dataType: text
+        sourceColumn: quarter
+    column 'month'
+        dataType: text
+        sourceColumn: month
+    column 'month_name'
+        dataType: text
+        sourceColumn: month_name
+    column 'season'
+        dataType: text
+        sourceColumn: season
+    column 'year_month'
+        dataType: text
+        sourceColumn: year_month
+    column 'is_primary_period'
+        dataType: text
+        isHidden
+        sourceColumn: is_primary_period

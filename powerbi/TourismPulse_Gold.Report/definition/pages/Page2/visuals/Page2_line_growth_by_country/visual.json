@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "Page2_line_growth_by_country",
+  "id": "Page2_line_growth_by_country",
+  "position": {
+    "x": 920,
+    "y": 0,
+    "width": 270,
+    "height": 730
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "projections": [
+          {
+            "field": {
+              "type": "Field",
+              "field": {
+                "table": "gold_tourism_growth_yearly",
+                "column": "year"
+              },
+              "queryRef": "gold_tourism_growth_yearly.year",
+              "nativeQueryRef": "gold_tourism_growth_yearly.year"
+            },
+            "queryRef": "gold_tourism_growth_yearly.year"
+          },
+          {
+            "field": {
+              "type": "Field",
+              "field": {
+                "table": "gold_tourism_growth_yearly",
+                "column": "growth_pct"
+              },
+              "queryRef": "gold_tourism_growth_yearly.growth_pct",
+              "nativeQueryRef": "gold_tourism_growth_yearly.growth_pct"
+            },
+            "queryRef": "gold_tourism_growth_yearly.growth_pct"
+          }
+        ]
+      }
+    }
+  }
+}

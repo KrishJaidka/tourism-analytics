@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "Page3_slicer_month",
+  "id": "Page3_slicer_month",
+  "position": {
+    "x": 0,
+    "y": 430,
+    "width": 400,
+    "height": 120
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "projections": [
+          {
+            "field": {
+              "type": "Field",
+              "field": {
+                "table": "dim_date",
+                "column": "month"
+              },
+              "queryRef": "dim_date.month",
+              "nativeQueryRef": "dim_date.month"
+            },
+            "queryRef": "dim_date.month"
+          }
+        ]
+      }
+    }
+  }
+}
