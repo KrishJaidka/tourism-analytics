@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "Page1_slicer_country",
+  "id": "Page1_slicer_country",
+  "position": {
+    "x": 0,
+    "y": 520,
+    "width": 400,
+    "height": 120
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "projections": [
+          {
+            "field": {
+              "type": "Field",
+              "field": {
+                "table": "dim_country",
+                "column": "country_name"
+              },
+              "queryRef": "dim_country.country_name",
+              "nativeQueryRef": "dim_country.country_name"
+            },
+            "queryRef": "dim_country.country_name"
+          }
+        ]
+      }
+    }
+  }
+}

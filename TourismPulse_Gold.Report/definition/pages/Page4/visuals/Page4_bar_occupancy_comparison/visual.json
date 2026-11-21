@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "Page4_bar_occupancy_comparison",
+  "id": "Page4_bar_occupancy_comparison",
+  "position": {
+    "x": 0,
+    "y": 480,
+    "width": 900,
+    "height": 300
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "projections": [
+          {
+            "field": {
+              "type": "Field",
+              "field": {
+                "table": "fact_hotel_performance",
+                "column": "accommodation_metric"
+              },
+              "queryRef": "fact_hotel_performance.accommodation_metric",
+              "nativeQueryRef": "fact_hotel_performance.accommodation_metric"
+            },
+            "queryRef": "fact_hotel_performance.accommodation_metric"
+          },
+          {
+            "field": {
+              "type": "Field",
+              "field": {
+                "table": "fact_hotel_performance",
+                "column": "standardized_value"
+              },
+              "queryRef": "fact_hotel_performance.standardized_value",
+              "nativeQueryRef": "fact_hotel_performance.standardized_value"
+            },
+            "queryRef": "fact_hotel_performance.standardized_value"
+          }
+        ]
+      }
+    }
+  }
+}
