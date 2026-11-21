@@ -1,0 +1,14 @@
+table gold_country_comparison
+    column 'country_key'
+        dataType: text
+        isKey
+        sourceColumn: country_key
+    column 'country_name'
+        dataType: text
+        sourceColumn: country_name
+    column 'year'
+        dataType: text
+        sourceColumn: year
+    column 'total_arrivals'
+        dataType: text
+        sourceColumn: total_arrivals

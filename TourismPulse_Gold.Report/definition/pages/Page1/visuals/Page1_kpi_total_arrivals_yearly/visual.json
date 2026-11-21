@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "Page1_kpi_total_arrivals_yearly",
+  "id": "Page1_kpi_total_arrivals_yearly",
+  "position": {
+    "x": 920,
+    "y": 0,
+    "width": 190,
+    "height": 100
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "projections": [
+          {
+            "field": {
+              "type": "Field",
+              "field": {
+                "table": "gold_yearly_arrivals_by_country",
+                "column": "arrivals"
+              },
+              "queryRef": "gold_yearly_arrivals_by_country.arrivals",
+              "nativeQueryRef": "gold_yearly_arrivals_by_country.arrivals"
+            },
+            "queryRef": "gold_yearly_arrivals_by_country.arrivals"
+          }
+        ]
+      }
+    }
+  }
+}

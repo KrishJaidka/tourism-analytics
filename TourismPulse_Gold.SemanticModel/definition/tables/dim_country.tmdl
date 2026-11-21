@@ -1,0 +1,23 @@
+table dim_country
+    column 'country_key'
+        dataType: text
+        isKey
+        sourceColumn: country_key
+    column 'iso3'
+        dataType: text
+        sourceColumn: iso3
+    column 'iso2'
+        dataType: text
+        sourceColumn: iso2
+    column 'country_name'
+        dataType: text
+        sourceColumn: country_name
+    column 'region'
+        dataType: text
+        sourceColumn: region
+    column 'is_country'
+        dataType: text
+        sourceColumn: is_country
+    column 'mapping_status'
+        dataType: text
+        sourceColumn: mapping_status

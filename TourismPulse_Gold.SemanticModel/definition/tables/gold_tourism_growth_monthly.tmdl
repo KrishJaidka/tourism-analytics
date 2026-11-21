@@ -1,0 +1,30 @@
+table gold_tourism_growth_monthly
+    column 'country_key'
+        dataType: text
+        isKey
+        sourceColumn: country_key
+    column 'year'
+        dataType: text
+        sourceColumn: year
+    column 'month'
+        dataType: text
+        sourceColumn: month
+    column 'source_system'
+        dataType: text
+        sourceColumn: source_system
+    column 'indicator_code'
+        dataType: text
+        sourceColumn: indicator_code
+    column 'visitor_category'
+        dataType: text
+        sourceColumn: visitor_category
+    column 'arrivals'
+        dataType: text
+        sourceColumn: arrivals
+    column 'prev_arrivals'
+        dataType: text
+        isHidden
+        sourceColumn: prev_arrivals
+    column 'growth_pct'
+        dataType: text
+        sourceColumn: growth_pct

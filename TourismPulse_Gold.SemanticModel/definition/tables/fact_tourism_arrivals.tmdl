@@ -1,0 +1,79 @@
+table fact_tourism_arrivals
+    column 'country_key'
+        dataType: text
+        isKey
+        sourceColumn: country_key
+    column 'geo_code'
+        dataType: text
+        sourceColumn: geo_code
+    column 'country_name'
+        dataType: text
+        sourceColumn: country_name
+    column 'year'
+        dataType: text
+        sourceColumn: year
+    column 'month'
+        dataType: text
+        sourceColumn: month
+    column 'date_key'
+        dataType: text
+        sourceColumn: date_key
+    column 'frequency'
+        dataType: text
+        sourceColumn: frequency
+    column 'source_system'
+        dataType: text
+        sourceColumn: source_system
+    column 'indicator_code'
+        dataType: text
+        sourceColumn: indicator_code
+    column 'indicator_label'
+        dataType: text
+        sourceColumn: indicator_label
+    column 'visitor_category'
+        dataType: text
+        sourceColumn: visitor_category
+    column 'residence_category'
+        dataType: text
+        sourceColumn: residence_category
+    column 'accommodation_category'
+        dataType: text
+        sourceColumn: accommodation_category
+    column 'original_value'
+        dataType: text
+        isHidden
+        sourceColumn: original_value
+    column 'original_unit'
+        dataType: text
+        isHidden
+        sourceColumn: original_unit
+    column 'standardized_value'
+        dataType: text
+        sourceColumn: standardized_value
+    column 'standardized_unit'
+        dataType: text
+        isHidden
+        sourceColumn: standardized_unit
+    column 'observation_status'
+        dataType: text
+        isHidden
+        sourceColumn: observation_status
+    column 'aggregation_level'
+        dataType: text
+        isHidden
+        sourceColumn: aggregation_level
+    column 'is_country'
+        dataType: text
+        sourceColumn: is_country
+    column 'is_primary_period'
+        dataType: text
+        isHidden
+        sourceColumn: is_primary_period
+    measure 'Total Annual Arrivals' = SUMX(fact_tourism_arrivals, standardized_value)
+        formatString: $ #,##0.00
+    measure 'Total Monthly Arrivals' = CALCULATE(SUMX(fact_tourism_arrivals, standardized_value), fact_tourism_arrivals[frequency] = "M")
+        formatString: $ #,##0.00
+    measure 'Tourism Growth % (Yearly)' = VAR Current = CALCULATE(SUMX(fact_tourism_arrivals, standardized_value), fact_tourism_arrivals[frequency] = "A") VAR Prev = CALCULATE(SUMX(fact_tourism_arrivals, standardized_value), fact_tourism_arrivals[frequency] = "A", DATEADD(dim_date[date], -1, YEAR)) RETURN DIVIDE(Current - Prev, Prev)
+        formatString: $ #,##0.00
+    measure 'Tourism Growth % (Monthly)' = VAR Current = CALCULATE(SUMX(fact_tourism_arrivals, standardized_value), fact_tourism_arrivals[frequency] = "M") VAR Prev = CALCULATE(SUMX(fact_tourism_arrivals, standardized_value), fact_tourism_arrivals[frequency] = "M", DATEADD(dim_date[date], -1, YEAR)) RETURN DIVIDE(Current - Prev, Prev)
+        formatString: $ #,##0.00

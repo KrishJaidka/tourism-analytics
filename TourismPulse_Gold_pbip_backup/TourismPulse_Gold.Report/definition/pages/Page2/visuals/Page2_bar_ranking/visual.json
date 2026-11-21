@@ -1,0 +1,44 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "Page2_bar_ranking",
+  "id": "Page2_bar_ranking",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "width": 900,
+    "height": 450
+  },
+  "visual": {
+    "visualType": "clusteredBarChart",
+    "query": {
+      "queryState": {
+        "projections": [
+          {
+            "field": {
+              "type": "Field",
+              "field": {
+                "table": "gold_destination_rankings",
+                "column": "country_name"
+              },
+              "queryRef": "gold_destination_rankings.country_name",
+              "nativeQueryRef": "gold_destination_rankings.country_name"
+            },
+            "queryRef": "gold_destination_rankings.country_name"
+          },
+          {
+            "field": {
+              "type": "Field",
+              "field": {
+                "table": "gold_destination_rankings",
+                "column": "total_arrivals"
+              },
+              "queryRef": "gold_destination_rankings.total_arrivals",
+              "nativeQueryRef": "gold_destination_rankings.total_arrivals"
+            },
+            "queryRef": "gold_destination_rankings.total_arrivals"
+          }
+        ]
+      }
+    }
+  }
+}

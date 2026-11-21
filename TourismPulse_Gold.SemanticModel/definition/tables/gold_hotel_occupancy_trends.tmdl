@@ -1,0 +1,14 @@
+table gold_hotel_occupancy_trends
+    column 'country_key'
+        dataType: text
+        isKey
+        sourceColumn: country_key
+    column 'year'
+        dataType: text
+        sourceColumn: year
+    column 'month'
+        dataType: text
+        sourceColumn: month
+    column 'avg_occupancy_rate'
+        dataType: text
+        sourceColumn: avg_occupancy_rate

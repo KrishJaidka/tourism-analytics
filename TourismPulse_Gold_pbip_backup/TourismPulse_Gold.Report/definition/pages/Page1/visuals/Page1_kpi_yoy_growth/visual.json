@@ -1,0 +1,32 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "Page1_kpi_yoy_growth",
+  "id": "Page1_kpi_yoy_growth",
+  "position": {
+    "x": 690,
+    "y": 0,
+    "width": 190,
+    "height": 100
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "projections": [
+          {
+            "field": {
+              "type": "Field",
+              "field": {
+                "table": "fact_tourism_arrivals",
+                "column": "Tourism Growth % (Yearly)"
+              },
+              "queryRef": "fact_tourism_arrivals.Tourism Growth % (Yearly)",
+              "nativeQueryRef": "fact_tourism_arrivals.Tourism Growth % (Yearly)"
+            },
+            "queryRef": "fact_tourism_arrivals.Tourism Growth % (Yearly)"
+          }
+        ]
+      }
+    }
+  }
+}
